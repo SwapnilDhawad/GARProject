@@ -54,9 +54,9 @@ jobs:
         docker push us-west2-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:latest
         docker push us-west2-docker.pkg.dev/$PROJECT_ID/images/$IMAGE_NAME:$GIT_TAG
 
-    - name: Get GKE Credentials 
-      run: |-
-        gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE"
+    #- name: Get GKE Credentials 
+    #  run: |-
+    #    gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE"
     
     - name: Setup Kustomize 
       run: |-
