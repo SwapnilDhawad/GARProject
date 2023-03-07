@@ -8,6 +8,3 @@ spec:
   selector:
     app: github-actions-gke
   type: LoadBalancer
-  ports:
-    - port: 80
-      targetPort: 8080
