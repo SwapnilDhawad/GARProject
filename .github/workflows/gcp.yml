@@ -77,6 +77,8 @@ jobs:
         #kubectl get services -o wide
 
         # replacing the image name in the k8s template
+        gcloud components install gke-gcloud-auth-plugin
+        sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
         gcloud container clusters get-credentials "$GKE_CLUSTER" --zone us-central1-a --project gifted-honor-378815
         #gcloud container clusters get-credentials--zone us-central1-c --project gifted-honor-378815
         ./kustomize edit set image LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG=$GAR_LOCATION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/$IMAGE_NAME:$GIT_TAG
