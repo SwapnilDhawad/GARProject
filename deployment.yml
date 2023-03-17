@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: github-actions-gke
-        image: gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
+        image: gcr.io/$project_id/$image_name:$git_tag
         ports:
           - containerPort: 80
