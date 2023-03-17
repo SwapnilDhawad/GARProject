@@ -77,7 +77,8 @@ jobs:
         #kubectl get services -o wide
 
         # replacing the image name in the k8s template
-        gcloud components install gke-gcloud-auth-plugin
+        sudo apt-get remove google-cloud-sdk
+        #gcloud components install gke-gcloud-auth-plugin
         sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
         gcloud container clusters get-credentials "$GKE_CLUSTER" --zone us-central1-a --project gifted-honor-378815
         #gcloud container clusters get-credentials--zone us-central1-c --project gifted-honor-378815
