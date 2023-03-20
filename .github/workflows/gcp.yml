@@ -15,7 +15,7 @@ jobs:
       GKE_ZONE: us-central1-c
       #GKE_ZONE: us-central1-a
       DEPLOYMENT_NAME: github-actions-gke
-      REPOSITORY: docker-image
+      REPOSITORY: assignmentgcr
       GAR_LOCATION: us-central1
 
     steps:
@@ -44,4 +44,4 @@ jobs:
     # Push the Docker image to Google Artifact Registry
     - name: Publish
       run: |-
-        docker push "$GAR_LOCATION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/$IMAGE:$GITHUB_SHA"  
+         docker push us-west2-docker.pkg.dev/$PROJECT_ID/images/$IMAGE:latest
