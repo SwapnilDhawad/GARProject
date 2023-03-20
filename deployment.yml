@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
+        image: $GAR_LOCATION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/$IMAGE_NAME:$GIT_TAG
         ports:
           - containerPort: 80
