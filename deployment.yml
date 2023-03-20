@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: $GAR_LOCATION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/$IMAGE_NAME:latest
+        image: gcr.io/$PROJECT_ID/$IMAGE_NAME:$GITHUB_SHA
         ports:
           - containerPort: 80
