@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,6 +17,6 @@ spec:
     spec:
       containers:
       - name: github-actions-gke
-        image: gcr.io/$project_id/$image_name:$git_tag
+        image: gcr.io/$PROJECT_ID/$IMAGE_NAME:$GIT_TAG
         ports:
           - containerPort: 80
