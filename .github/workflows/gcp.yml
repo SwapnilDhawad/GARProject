@@ -10,9 +10,9 @@ jobs:
     env:
       IMAGE: assignmentgcr
       PROJECT_ID: gifted-honor-378815 
-      GKE_CLUSTER: assignment-1
+      GKE_CLUSTER: assignment
       #GKE_CLUSTER: primary
-      GKE_ZONE: us-central1-c
+      GKE_ZONE: us-central1
       #GKE_ZONE: us-central1-a
       DEPLOYMENT_NAME: github-actions-gke
       REPOSITORY: docker-image
