@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: gcr.io/$PROJECT_ID/$IMAGE_NAME:$GITHUB_SHA
+        image: $GAR_LOCATION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/$IMAGE:$GITHUB_SHA
         ports:
           - containerPort: 80
